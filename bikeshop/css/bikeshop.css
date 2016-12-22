@@ -1,0 +1,29 @@
+footer {
+  background-color: grey;
+  color:white;
+
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+
+p.frontpage, h1 {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 2.0em;
+}
+
+#produkten {
+  text-align: center;
+}
+
+span.right {
+  float:right;
+}
