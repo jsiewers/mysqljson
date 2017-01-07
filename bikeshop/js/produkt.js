@@ -1,6 +1,4 @@
-var winkelmandje = [];
 var produkten = [];
-var totaalNode="";
 var url = "http://localhost:8888/mysqljson/shopping-card/webshop-json.php";
 var form = document.getElementById("bestelformulier");
 var container = document.getElementById("produkten");
@@ -11,8 +9,8 @@ function init() {
 	}
 	loadJSON(url, function(response) {
 		localStorage.winkel = response;
-		objs = getWinkelItems();
-		showItems(objs);
+		produkten = getWinkelItems();
+		drawProdukten();
 	});
 
 }
@@ -120,9 +118,9 @@ function drawTotaalPrijs() {
 	row.appendChild(col1);
 	container.appendChild(row);
 }
-function showItems(objs, type) { //type is "produkten" om alle produkten weer te geven of "winkelmandje" om een e
-		for (i = 0; i < objs.length; i++) {
-			console.log(objs[i]);
+function drawProdukten() { //type is "produkten" om alle produkten weer te geven of "winkelmandje" om een e
+		for (i = 0; i < produkten.length; i++) {
+			console.log(produkten[i]);
 			var col = document.createElement("div");
 			col.className = "col-md-4";
 			var img = document.createElement("img");
